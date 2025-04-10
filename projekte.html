@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projekte – Joshua Aleth</title>
+  <style>
+    body {
+      font-family: 'Noto Serif JP', serif;
+      background: linear-gradient(to bottom right, #fff7f0, #ffe9f3);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #b54876;
+    }
+    .projekt {
+      margin-bottom: 2.5rem;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      background-color: #fff9f5;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+    .projekt h2 {
+      font-size: 1.4rem;
+      color: #a03e60;
+      border-left: 4px solid #ffc6d6;
+      padding-left: 0.5rem;
+    }
+    .projekt a {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      color: #b54876;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .projekt a:hover {
+      text-decoration: underline;
+    }
+    .projekt p {
+      max-width: 700px;
+      margin: 0.5rem auto;
+      line-height: 1.6;
+    }
+    .projekt img,
+    .projekt video {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌸 Projekte 🌸</h1>
+    <p style="text-align:center; max-width: 700px; margin: 0 auto 2rem;">Hier findest du eine Auswahl an Projekten, die ich im Laufe meiner Ausbildung, meines Studiums oder privat umgesetzt habe. Die Inhalte zeigen mein Interesse an Technik, Gestaltung und interaktiver Entwicklung.</p>
+
+    <div class="projekt">
+      <h2>Projekt 1 – Halbjahresdokumentation</h2>
+      <a href="bilder/Aleth_Joshua_halbjahresdokumentation.pdf" download>PDF herunterladen</a>
+      <p>Diese Dokumentation entstand im Rahmen des Kommunikationsdesign-Unterrichts. Sie enthält konzeptuelle Überlegungen, Designansätze und technische Umsetzungen eines fiktiven Projekts.</p>
+    </div>
+
+    <div class="projekt">
+      <h2>Projekt 2 – Faltblatt</h2>
+      <p>Ein Faltblatt-Design, das für das Museum Ulm gemacht worden ist. Beim Klick auf das Deckblatt wird das Innere angezeigt.</p>
+      <img src="bilder/faltblattT.png" alt="Faltblatt Deckblatt" onclick="showLightbox('bilder/FaltblattI')">
+    </div>
+
+    <div class="projekt">
+      <h2>Projekt 3 – Blender</h2>
+      <img src="bilder/uboot.png" alt="Blender Projekt">
+      <p>Im Studium behandeln wir nicht nur Webdesign und Programmieren, sondern auch Computergrafik – wie hier mit Blender.</p>
+    </div>
+
+    <div class="projekt">
+      <h2>Projekt 4 – Musikvideo „Babykai“</h2>
+      <a href="https://www.youtube.com/watch?v=83nlnYJ3wRM" target="_blank">
+        Video auf YouTube ansehen
+      </a>
+      <p>Ein Musikvideo, das im Zuge eines Projekts am ZFG Ulm entstanden ist.</p>
+      <p><strong>Künstler:</strong> BabyKai<br> 
+    </div>
+    
+
+    <div class="lightbox" id="lightbox" onclick="hideLightbox()">
+      <img id="lightbox-img" src="" alt="Großansicht">
+    </div>
+  </div>
+
+  <script>
+    function showLightbox(src) {
+      const lightbox = document.getElementById("lightbox");
+      const img = document.getElementById("lightbox-img");
+      img.src = src;
+      lightbox.style.display = "flex";
+    }
+
+    function hideLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+</body>
+</html>
