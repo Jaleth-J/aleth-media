@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects – Joshua Aleth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #fffdfc, #ffece5);
+      background-repeat: no-repeat;
+    background-attachment: fixed; 
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    body.dark-mode {
+      background: #1a1a1a;
+      background-repeat: no-repeat;
+    background-attachment: fixed; 
+      color: #f0f0f0;
+      
+    }
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    body.dark-mode .container {
+      background-color: #2a2a2a;
+    }
+    h1 {
+      text-align: center;
+      color: #ff4e28;
+      margin-bottom: 2rem;
+    }
+    .project {
+      margin-bottom: 2rem;
+    }
+    .project h2 {
+      color: #ff4e28;
+      margin-bottom: 0.5rem;
+    }
+    .project p {
+      margin-bottom: 1rem;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 0.5rem;
+    }
+    .topbar {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 9999;
+    }
+    .topbar a, .topbar button {
+      background-color: #ff4e28;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .topbar button:hover,
+    .topbar a:hover {
+      background-color: #e0401f;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Home</a>
+    <button onclick="toggleDarkMode()">🌓</button>
+  </div>
+
+  <div class="container">
+    <h1>Project Showcase</h1>
+
+    <div class="project">
+      <h2>Hiragana Quiz Game</h2>
+      <p>A mini interactive learning game created with JavaScript to help beginners practice Hiragana. It includes multiple choice, hints and daily stats.</p>
+      <a href="hiragana.html">➡️ Try the Game</a>
+    </div>
+
+    <div class="project">
+      <h2>Semester Documentation</h2>
+      <p>This PDF showcases my work and reflections from the semester project in Communication Design. It contains layout, design elements and concept structure.</p>
+      <iframe src="dateien/Aleth_Joshua_halbjahresdokumentation.pdf"></iframe>
+    </div>
+
+    <div class="project">
+        <h2>Music Video Project: "Babykai"</h2>
+        <p>A video project produced in a student team, including concept, filming and editing. This was part of a media design course in collaboration with ZFG Ulm.</p>
+        <a href="https://www.youtube.com/watch?v=83nlnYJ3wRM" target="_blank">Watch Video</a>
+      </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("dark", document.body.classList.contains("dark-mode"));
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("dark") === "true") {
+        document.body.classList.add("dark-mode");
+      }
+    });
+  </script>
+</body>
+</html>
