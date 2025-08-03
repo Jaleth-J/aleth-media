@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects – Joshua Aleth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="projekt.css">
+
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Home</a>
+    <button onclick="toggleDarkMode()">🌓</button>
+  </div>
+
+  <div class="container">
+    <h1>Project Showcase</h1>
+   
+    </div>
+    <!-- Projekt-Raster -->
+<div class="project-grid">
+
+  <div class="project-card" onclick="openModal('modal6')">
+    <div class="project-header">Crunchyroll language filter<span class="flag">🔖</span></div>
+    <div class="project-summary">Firefox extension to filter the content by language.</div>
+  </div>
+
+  <div class="project-card" onclick="openModal('modal4')">
+    <div class="project-header">3D Scene Scripting Tool <span class="flag">🔖</span></div>
+    <div class="project-summary">Text-based 3D scene creation using custom scripting syntax and Three.js.</div>
+  </div>
+
+  <div class="project-card" onclick="openModal('modal8')">
+    <div class="project-header">Heatmap Tracker</div>
+    <div class="project-summary">A visual tool to track and analyze user interaction patterns in real-time.</div>
+  </div>
+
+  <div class="project-card" onclick="openModal('modal5')">
+    <div class="project-header">Blender Project <span class="flag">🔖</span></div>
+    <div class="project-summary">A Blender modeling project for an underwater world.</div>
+  </div>
+
+  <div class="project-card" onclick="openModal('modal7')">
+    <div class="project-header">UX Micro Interaction Kit</div>
+    <div class="project-summary">Small details with big impact. 6 crafted microinteractions.</div>
+  </div>
+
+  <div class="project-card" onclick="openModal('modal1')">
+    <div class="project-header">Hiragana Daily</div>
+    <div class="project-summary">Mini game to learn Japanese Hiragana with hints and daily feedback.</div>
+  </div>
+
+  <div class="project-card" onclick="openModal('modal3')">
+    <div class="project-header">Music Video: Babykai</div>
+    <div class="project-summary">Creative team production with full video workflow from shoot to edit.</div>
+  </div>
+
+  <div class="project-card" onclick="openModal('modal2')">
+    <div class="project-header">Semester Documentation</div>
+    <div class="project-summary">Visual communication project featuring layout and design research.</div>
+  </div>
+
+</div>
+
+    
+ 
+      
+    <div id="modal7" class="modal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('modal7')">&times;</button>
+        <h2>UX Micro Interaction Kit</h2>
+        <p>Small details, big impact – crafted microinteractions for smooth UX.</p>
+    
+        <div class="interaction-grid">
+          <!-- Deine 6 Interaktionen hier -->
+          ...
+       
+    
+          <!-- Row 1 -->
+          <!-- 1: Pacman -->
+          <div class="interaction-card">
+            <div class="scene">
+              <div class="pacman">
+                <div class="mouth-top"></div>
+                <div class="mouth-bottom"></div>
+              </div>
+              <div class="pill"></div>
+              <div class="pill"></div>
+              <div class="pill"></div>
+              <div class="checkmark"></div>
+            </div>
+          </div>
+    
+          <!-- 2: Loader -->
+          <div class="interaction-card">
+            <div class="loader-inline"></div>
+          </div>
+    
+          <!-- Row 2 -->
+          <!-- 3: Ripple Button -->
+          <div class="interaction-card">
+            <button class="ripple-button">Click Me</button>
+          </div>
+    
+          <!-- 4: Error Shake -->
+          <div class="interaction-card">
+            <div class="error-box">
+              <input type="text" placeholder="Enter code">
+              <button onclick="this.parentElement.classList.add('error')">Submit</button>
+              <p class="error-text">Invalid input!</p>
+            </div>
+          </div>
+    
+          <!-- Row 3 -->
+          <!-- 5: Toggle Switch -->
+          <div class="interaction-card">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+    
+          <!-- 6: Stepper -->
+          <div class="interaction-card">
+            <div class="stepper">
+              <div class="step active"></div>
+              <div class="step"></div>
+              <div class="step"></div>
+              <div class="step"></div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+      
+        
+      <div id="modal8" class="modal">
+        <div class="modal-content">
+          <button class="close-btn" onclick="closeModal('modal8')">&times;</button>
+          <h2>Heatmap Tracker</h2>
+          <p>
+            <strong>Heatmap Tracker</strong> is an experimental web tool designed to analyze user interactions within a webpage.  
+            It visualizes click behavior in real time and stores interaction data locally in the browser.
+          </p>
+      
+          <p>
+            This project demonstrates how visual analysis, UI design, and lightweight data logging can be combined to gain insights into user behavior.  
+            It's built to provide a foundation for UX research, interface testing, or development teams looking to track engagement with minimal setup.
+          </p>
+      
+          <ul>
+            <li>🔴 Real-time heatmap rendering of user clicks</li>
+            <li>📦 Stores interaction data in <code>localStorage</code></li>
+            <li>⬇️ Export click logs as JSON</li>
+            <li>🧪 Prototype only – no backend, easy to extend</li>
+          </ul>
+      
+          <p style="margin-top: 1rem;">
+            🔬 <em>This is a functional prototype</em> intended to visualize and explore interaction data in a browser environment.<br>
+            The focus is on concept and design potential rather than full-scale analytics infrastructure.
+          </p>
+      
+          <p>
+            👉 View the project on GitHub:  
+            <a href="https://github.com/Jaleth-J/Heatmap-tracker" target="_blank">
+              github.com/yourusername/heatmap-tracker
+            </a>
+          </p>
+        </div>
+      </div>
+            
+      
+  
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal1')">&times;</button>
+      <h2>🎮 Hiragana Daily</h2>
+      <h2>🎮 Hiragana Daily – Language Learning Mini Game</h2>
+  <p><strong>Overview:</strong><br>
+    <em>Hiragana Daily</em> is a browser-based mini game designed to reinforce the meaning of Japanese Hiragana characters. Players match each character with its correct meaning (like "sun" or "car") and can use emoji hints to improve recall.
+  </p>
+
+  <p><strong>Technology & Focus:</strong><br>
+    This project combines <strong>web development</strong> (HTML, CSS, JS) with a <strong>UX-focused learning interface</strong>. The design emphasizes simplicity, quick feedback, and optional dark mode for comfort during evening study sessions.
+  </p>
+
+  <ul>
+    <li>Randomly generated Hiragana characters with romaji support</li>
+    <li>Meaning-based multiple-choice questions</li>
+    <li>💡 Emoji hint system for visual learners</li>
+    <li>Dark mode toggle</li>
+    <li>Mobile-responsive layout</li>
+  </ul>
+
+  <p><strong>Target Audience:</strong><br>
+    Beginners in Japanese language learning who want to link characters with basic vocabulary using a lightweight and playful approach.
+  </p>
+
+  <p><strong>My Role:</strong><br>
+    I independently <strong>designed and developed</strong> the full experience, including UI layout, random logic, hint system, and feedback flow in JavaScript.
+  </p>
+
+  <p><em>This project also reflects my personal language learning journey and serves as a UX experiment in minimalist gamified learning for non-Latin scripts.</em></p>
+</section>
+      <p><a href="hiragana.html" target="_blank">➡️ Try the Game</a></p>
+      <img src="dateien/Screenshot 2025-04-23 170524.png" alt="Hiragana Daily Screenshot" style="width:100%; border-radius:0.5rem;">
+    </div>
+  </div>
+ 
+    
+  </div>
+  <div id="modal6" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal6')">&times;</button>
+  
+      <!-- Plugin Logo Area -->
+      <div style="text-align:center; margin-bottom:1rem;">
+        <img src="dateien/icon48.png" alt="Plugin Logo" style="height:60px;">
+      </div>
+  
+      <h2>🧩 Crunchyroll Language Filter</h2>
+      <h2>🧩 Firefox Plugin – Fine-Grained Language Filtering for Anime</h2>
+  
+      <p><strong>Overview:</strong><br>
+        <em>Crunchyroll Language Filter</em> is a browser extension that enhances the Crunchyroll interface by allowing users to filter anime by specific audio languages—such as "German," "Japanese," or "English"—instead of just the usual "Sub" or "Dub" options.
+      </p>
+  
+      <p><strong>Technology & Challenges:</strong><br>
+        Built using the <strong>Firefox WebExtension API</strong>, <strong>JavaScript</strong>, and dynamic <strong>DOM parsing</strong>, the plugin relies on cross-page communication via <code>runtime.sendMessage()</code>. Major technical challenges included handling <strong>CORS restrictions</strong> and dealing with Crunchyroll’s <strong>single-page application (SPA)</strong> behavior.
+      </p>
+  
+      <ul>
+        <li>Reads available audio languages directly from the DOM</li>
+        <li>Uses <code>background.js</code> to relay data between pages</li>
+        <li>Planned popup interface for selecting target languages</li>
+        <li>Early prototype currently blocks series pages by default</li>
+        <li>Intended for submission to Crunchyroll</li>
+      </ul>
+  
+      <p><strong>Motivation:</strong><br>
+        I created this plugin out of a deep interest in browser extensions—especially how they can improve existing websites without needing access to their backend.
+      </p>
+  
+      <p><strong>My Role:</strong><br>
+        I fully <strong>designed and developed</strong> the plugin architecture, messaging system, and core logic to handle CORS-safe communication and asynchronous data flows.
+      </p>
+  
+      <p><em>This plugin is also part of my personal learning journey in browser automation and DOM-level enhancement for user experience design.</em></p>
+  
+      <p><strong>Try it:</strong> (Prototype coming soon)</p>
+  
+      <!-- Example Code Block -->
+      <pre style="background:#1a1a1a; color:white; padding:1rem; border-radius:0.5rem; overflow-x:auto;">
+  // content.js
+  browser.runtime.sendMessage({
+    type: "languageData",
+    payload: extractLanguagesFromDOM()
+  });
+  
+  // background.js
+  browser.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+    if (msg.type === "languageData") {
+      storeLanguages(sender.tab.id, msg.payload);
+    }
+  });
+      </pre>
+    </div>
+  </div>
+  
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal2')">&times;</button>
+      <h2>📄 Semester Documentation</h2>
+      <p>Semester work and reflection in Communication Design with layout and concept development.</p>
+      <iframe src="dateien/Aleth_Joshua_halbjahresdokumentation.pdf" width="100%" height="400"></iframe>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal3')">&times;</button>
+      <h2>🎬 Music Video: Babykai – Student Production</h2>
+  <p><strong>Overview:</strong><br>
+    This music video was produced as part of a collaborative student project for the artist <strong>Babykai</strong>. The group worked independently under light supervision from a university lecturer, focusing on creative decision-making and professional production standards.
+  </p>
+
+  <p><strong>Focus Areas:</strong><br>
+    The project offered hands-on experience across the entire production pipeline:
+  </p>
+  <ul>
+    <li>Planning and execution of camera movements and visual storytelling</li>
+    <li>On-set collaboration and coordination across roles</li>
+    <li>Postproduction editing, including video cutting, grading, and timing</li>
+  </ul>
+
+  <p><strong>Key Learnings:</strong><br>
+    The team explored principles of cinematic rhythm, visual composition, and practical workflow coordination. Creative decisions were made collectively, allowing each team member to gain insight into both the artistic and technical aspects of video production.
+  </p>
+
+  <p><strong>Tools & Techniques:</strong><br>
+    Adobe Premiere Pro, manual camera operation, scene blocking, postproduction pipelines.
+  </p>
+
+  <p><em>This project emphasized team-based creativity and real-world production practice – skills that inform ongoing interest in visual design, media production, and UX workflows.</em></p>
+</section>
+      </ul>
+      <p><a href="https://www.youtube.com/watch?v=83nlnYJ3wRM" target="_blank">🎥 Watch Video</a></p>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal4')">&times;</button>
+      <h2>🧱 3D Scene Scripting Tool</h2>
+      <p><strong>Overview:</strong><br>
+        A web-based creative tool that allows users to build simple 3D scenes using a custom command syntax, designed for fast scene prototyping and storytelling.
+      </p>
+      
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Custom DSL to define and position 3D elements (e.g. CUBE, SPHERE, LIGHT)</li>
+        <li>Real-time rendering with <strong>Three.js</strong></li>
+        <li>Interactive camera modes and export options (PNG/JSON)</li>
+        <li>Storyboard feature to document visual scenes with notes</li>
+      </ul>
+      
+      <p><strong>Use Case:</strong><br>
+        Ideal for creative prototyping, educational demos, and visual storytelling workflows without needing deep 3D knowledge.
+      </p>
+  
+      <p><strong>Role:</strong><br>
+        Fully designed and implemented with focus on intuitive command structure, UI layout, and rendering logic.
+      </p>
+    
+      <p><a href="https://github.com/Jaleth-J/3D-scripting-Tool" target="_blank">📁 View Project on GitHub</a></p>
+    </div>
+  </div>
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('modal5')">&times;</button>
+        <h2>🌊 Blender Project: Underwater World</h2>
+        <p><strong>Overview:</strong><br>
+          A creative university project focused on building an underwater world in Blender. The project is part of a course aimed at developing a solid foundation in 3D modeling, materials, and scene composition.
+        </p>
+        
+        <p><strong>Current Progress:</strong><br>
+          Basic models include terrain, submarine elements, and experimental object design (e.g. shark-head torpedoes and a potential robotic arm). Lighting and animation are currently being explored.
+        </p>
+    
+        <p><strong>Learning Focus:</strong></p>
+        <ul>
+          <li>Modeling and texturing underwater objects</li>
+          <li>Scene layout and lighting setup in Blender</li>
+          <li>Workflow organization and concept design</li>
+        </ul>
+    
+        <p><em>This project is ongoing and will evolve into a complete stylized underwater scene over the course of the semester.</em></p>
+      </div>
+    </div>
+  
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("dark", document.body.classList.contains("dark-mode"));
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("dark") === "true") {
+        document.body.classList.add("dark-mode");
+      }
+    });
+
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    window.addEventListener('click', function(event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) modal.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiragana Daily – Joshua Aleth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fffaf6;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.topbar {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 999;
+}
+
+.topbar a, .toggle-mode {
+  background-color: #ff4e28;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.topbar a:hover, .toggle-mode:hover {
+  background-color: #e0401f;
+}
+
+.container {
+  max-width: 600px;
+  margin: 6rem auto 3rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+body.dark-mode .container {
+  background-color: #2a2a2a;
+}
+
+h1 {
+  color: #ff4e28;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.char-box {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.romaji {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff4e28;
+}
+
+.hint {
+  cursor: pointer;
+  color: #ff4e28;
+  margin-bottom: 0.5rem;
+}
+
+.hint-content {
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.choices button {
+  padding: 0.75rem 1.5rem;
+  background-color: #ff4e28;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.choices button:hover {
+  background-color: #e0401f;
+}
+
+.feedback {
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.main-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #ff4e28;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background-color: #e0401f;
+}
+
+.stats {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.info-container {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.info-container button {
+  background-color: #2a2a2a;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.info-box {
+  margin-top: 0.5rem;
+  background: #fff2ee;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  display: none;
+  text-align: left;
+}
+
+body.dark-mode .info-box {
+  background: #3a3a3a;
+}
+
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html">← Home</a>
+    <button class="toggle-mode" onclick="toggleDarkMode()">🌃</button>
+  </div>
+
+  <div class="container">
+    <div class="info-container">
+      <button onclick="toggleInfo()">❔</button>
+      <div class="info-box" id="infoBox">
+        <strong>How to Play:</strong><br>
+        1. A Hiragana character will appear.<br>
+        2. Choose the correct <em>meaning</em> from the options.<br>
+        3. Use the 💡 Hint button for an emoji clue.<br>
+        4. Track your daily progress!
+      </div>
+    </div>
+
+    <h1>Hiragana of the Day </h1>
+    <div class="char-box" id="char">あ</div>
+    <div class="romaji" id="romaji">a</div>
+
+    <div class="hint" onclick="showHint()">💡 Show Hint</div>
+    <div class="hint-content" id="hintContent"></div>
+
+    <div class="choices" id="choices"></div>
+
+    <div class="feedback" id="feedback"></div>
+
+    <button class="main-btn" onclick="showRandomChar()">Show Another</button>
+    <div class="stats" id="stats"></div>
+  </div>
+
+  
+  <script src="js/hiragana.js"></script>
+</body>
+</html>
